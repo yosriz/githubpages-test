@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>kin-core-python · Kin Developer Platform</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The main repository is at [github.com/kinecosystem/kin-core-python](https://github.com/kinecosystem/kin-core-python)."/><meta property="og:title" content="kin-core-python · Kin Developer Platform"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kinecosystem.org//index.html"/><meta property="og:description" content="The main repository is at [github.com/kinecosystem/kin-core-python](https://github.com/kinecosystem/kin-core-python)."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/kin.svg" alt="Kin Developer Platform"/><h2 class="headerTitleWithLogo">Kin Developer Platform</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro.html" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/docs/api-reference-overview.html" target="_self">Docs</a></li><li class=""><a href="/docs/tools.html" target="_self">Tools</a></li><li class=""><a href="/en/help.html" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Docs</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Docs</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-reference-overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/android.html">Android</a></li><li class="navListItem"><a class="navItem" href="/docs/ios.html">IOS</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/python.html">Python</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kinecosystem/kin-core-docs/tree/master/docs/python.md" target="_blank" rel="noreferrer noopener">Edit</a><h1>kin-core-python</h1></header><article><div><span><p>The main repository is at <a href="https://github.com/kinecosystem/kin-core-python">github.com/kinecosystem/kin-core-python</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="requirements"></a><a href="#requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Requirements</h2>
+<p>Make sure you have Python 2 &gt;=2.7.9.</p>
+<h2><a class="anchor" aria-hidden="true" id="installation"></a><a href="#installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<pre><code class="hljs css languages- bash">pip install git+https://github.com/kinecosystem/kin-core-python.git
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="usage"></a><a href="#usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+<h3><a class="anchor" aria-hidden="true" id="initialization"></a><a href="#initialization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialization</h3>
+<p>To initialize the SDK, you need to provide the following parameters:</p>
+<ul>
+<li>(optional) the secret key to init the internal SDK wallet with. If not provided, you will NOT be able to use the
+following functions: <code>get_address</code>, <code>get_native_balance</code>, <code>get_kin_balance</code>, <code>create_account</code>, <code>monitor_kin_payments</code>.</li>
+<li>(optional) the endpoint URI of your <a href="https://www.stellar.org/developers/horizon/reference/">Horizon</a> node.
+If not provided, a default Horizon endpoint will be used, either a testnet or pubnet, depending on the <code>network</code>
+parameter below.</li>
+<li>(optional) a network identifier, which is either <code>PUBLIC</code> or <code>TESTNET</code>, defaults to <code>PUBLIC</code>.</li>
+<li>(optional) a list of channel keys. If provided, the channel accounts will be used to sign transactions instead
+of the internal SDK wallet. Use it to insure higher concurrency.</li>
+</ul>
+<pre><code class="hljs css languages- python"><span class="hljs-keyword">import</span> kin
+
+<span class="hljs-comment"># Init SDK without a secret key, in the public Stellar network (for generic blockchain queries)</span>
+sdk = kin.SDK()
+
+<span class="hljs-comment"># Init SDK without a secret key, for Stellar testnet</span>
+sdk = kin.SDK(network=<span class="hljs-string">'TESTNET'</span>)
+
+<span class="hljs-comment"># Init SDK without a secret key, with specific Horizon server, running on Stellar testnet</span>
+sdk = kin.SDK(horizon_endpoint_uri=<span class="hljs-string">'http://my.horizon.uri'</span>, network=<span class="hljs-string">'TESTNET'</span>)
+
+<span class="hljs-comment"># Init SDK with wallet secret key, on public network</span>
+sdk = kin.SDK(secret_key=<span class="hljs-string">'my key'</span>)
+
+<span class="hljs-comment"># Init SDK with several channels, on public network</span>
+sdk = kin.SDK(secret_key=<span class="hljs-string">'my key'</span>, channel_secret_keys=[<span class="hljs-string">'key1'</span>, <span class="hljs-string">'key2'</span>, ...])
+</code></pre>
+<p>For more examples, see the <a href="https://github.com/kinecosystem/kin-core-python/tree/master/test/test_sdk.py">SDK test file</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="getting-wallet-details"></a><a href="#getting-wallet-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting Wallet Details</h3>
+<pre><code class="hljs css languages- python"><span class="hljs-comment"># Get the address of my wallet account. The address is derived from the secret key the SDK was inited with.</span>
+address = sdk.get_address()
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="getting-account-balance"></a><a href="#getting-account-balance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting Account Balance</h3>
+<pre><code class="hljs css languages- python"><span class="hljs-comment"># Get native (lumen) balance of the SDK wallet</span>
+native_balance = sdk.get_native_balance()
+
+<span class="hljs-comment"># Get KIN balance of the SDK wallet</span>
+kin_balance = sdk.get_kin_balance()
+
+<span class="hljs-comment"># Get native (lumen) balance of some account</span>
+native_balance = sdk.get_account_native_balance(<span class="hljs-string">'address'</span>)
+
+<span class="hljs-comment"># Get KIN balance of some account</span>
+kin_balance = sdk.get_account_kin_balance(<span class="hljs-string">'address'</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="getting-account-data"></a><a href="#getting-account-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting Account Data</h3>
+<pre><code class="hljs css languages- python"><span class="hljs-comment"># returns kin.AccountData</span>
+account_data = sdk.get_account_data(<span class="hljs-string">'address'</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="checking-if-account-exists"></a><a href="#checking-if-account-exists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Checking If Account Exists</h3>
+<pre><code class="hljs css languages- python">account_exists = sdk.check_account_exists(<span class="hljs-string">'address'</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="creating-a-new-account"></a><a href="#creating-a-new-account" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating a New Account</h3>
+<pre><code class="hljs css languages- python"><span class="hljs-comment"># create a new account prefunded with MIN_ACCOUNT_BALANCE lumens</span>
+tx_hash = sdk.create_account(<span class="hljs-string">'address'</span>)
+
+<span class="hljs-comment"># create a new account prefunded with a specified amount of native currency (lumens).</span>
+tx_hash = sdk.create_account(<span class="hljs-string">'address'</span>, starting_balance=<span class="hljs-number">1000</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="checking-if-account-is-activated-trustline-established"></a><a href="#checking-if-account-is-activated-trustline-established" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Checking if Account is Activated (Trustline established)</h3>
+<pre><code class="hljs css languages- python"><span class="hljs-comment"># check if KIN is trusted by some account</span>
+kin_trusted = sdk.check_account_activated(<span class="hljs-string">'address'</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sending-currency"></a><a href="#sending-currency" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sending Currency</h3>
+<pre><code class="hljs css languages- python"><span class="hljs-comment"># send native currency (lumens) to some address</span>
+tx_hash = sdk.send_native(<span class="hljs-string">'address'</span>, <span class="hljs-number">100</span>, memo_text=<span class="hljs-string">'order123'</span>)
+
+<span class="hljs-comment"># send KIN to some address</span>
+tx_hash = sdk.send_kin(<span class="hljs-string">'address'</span>, <span class="hljs-number">1000</span>, memo_text=<span class="hljs-string">'order123'</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="getting-transaction-data"></a><a href="#getting-transaction-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting Transaction Data</h3>
+<pre><code class="hljs css languages- python"><span class="hljs-comment"># create a transaction, for example a new account</span>
+tx_hash = sdk.create_account(<span class="hljs-string">'address'</span>)
+<span class="hljs-comment"># get transaction data, returns kin.TransactionData</span>
+tx_data = sdk.get_transaction_data(tx_hash)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="transaction-monitoring"></a><a href="#transaction-monitoring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Transaction Monitoring</h3>
+<pre><code class="hljs css languages- python"><span class="hljs-comment"># define a callback function that receives an address and a kin.TransactionData object</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_callback</span><span class="hljs-params">(address, tx_data)</span>:</span>
+    print(address, tx_data)
+
+<span class="hljs-comment"># start monitoring KIN payments related to the SDK wallet account</span>
+sdk.monitor_kin_payments(print_callback)
+
+<span class="hljs-comment"># start monitoring KIN payments related to a list of addresses</span>
+sdk.monitor_accounts_kin_payments([<span class="hljs-string">'address1'</span>, <span class="hljs-string">'address2'</span>], print_callback)
+
+<span class="hljs-comment"># start monitoring all transactions related to a list of addresses</span>
+sdk.monitor_accounts_transactions([<span class="hljs-string">'address1'</span>, <span class="hljs-string">'address2'</span>], print_callback)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="checking-status"></a><a href="#checking-status" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Checking Status</h3>
+<p>The handy <code>get_status</code> method will return some parameters the SDK was configured with, along with Horizon status:</p>
+<pre><code class="hljs css languages- python">status = sdk.get_status()
+<span class="hljs-keyword">print</span> status
+<span class="hljs-comment">#  {</span>
+<span class="hljs-comment">#     'sdk_version': '0.2.0',</span>
+<span class="hljs-comment">#     'channels': {</span>
+<span class="hljs-comment">#         'all': 5,  </span>
+<span class="hljs-comment">#         'free': 5  </span>
+<span class="hljs-comment">#     }, </span>
+<span class="hljs-comment">#     'kin_asset': {</span>
+<span class="hljs-comment">#         'code': 'KIN', </span>
+<span class="hljs-comment">#         'issuer': '&lt;issuer address&gt;'</span>
+<span class="hljs-comment">#     }, </span>
+<span class="hljs-comment">#     'network': 'TESTNET', </span>
+<span class="hljs-comment">#     'horizon': {</span>
+<span class="hljs-comment">#         'uri': '&lt;horizon uri&gt;', </span>
+<span class="hljs-comment">#         'online': True,</span>
+<span class="hljs-comment">#         'error': None </span>
+<span class="hljs-comment">#     }, </span>
+<span class="hljs-comment">#     'address': '&lt;sdk wallet address&gt;',</span>
+<span class="hljs-comment">#     'transport': {</span>
+<span class="hljs-comment">#         'pool_size': 7,</span>
+<span class="hljs-comment">#         'num_retries': 5,</span>
+<span class="hljs-comment">#         'request_timeout': 11,</span>
+<span class="hljs-comment">#         'retry_statuses': [413, 429, 503, 504],</span>
+<span class="hljs-comment">#         'backoff_factor': 0.5</span>
+<span class="hljs-comment">#     }</span>
+<span class="hljs-comment">#   }</span>
+</code></pre>
+<ul>
+<li><code>sdk_version</code> - the version of this SDK.</li>
+<li><code>address</code> - the SDK wallet address.</li>
+<li><code>channels</code>:
+<ul>
+<li><code>all</code> - the number of channels the SDK was configured with.</li>
+<li><code>free</code> - the number of currently free channels. If the number is consistently close to zero, it means the channels
+are always busy, and you might consider adding more channels or more servers.</li>
+</ul></li>
+<li><code>kin_asset</code> - the KIN asset the SDK was configured with.</li>
+<li><code>network</code> - the network the SDK was configured with (PUBLIC/TESTNET/CUSTOM).</li>
+<li><code>horizon</code>:
+<ul>
+<li><code>uri</code> - the endpoint URI of the Horizon server.</li>
+<li><code>online</code> - Horizon online status.</li>
+<li><code>error</code> - Horizon error (when not <code>online</code>) .</li>
+</ul></li>
+<li><code>transport</code>:
+<ul>
+<li><code>pool_size</code> - number of pooled connections to Horizon.</li>
+<li><code>num_retries</code> - number of retries on failed request.</li>
+<li><code>request_timeout</code> - single request timeout.</li>
+<li><code>retry_statuses</code> - a list of statuses to retry on.</li>
+<li><code>backoff_factor</code> - a backoff factor to apply between retry attempts.</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="limitations"></a><a href="#limitations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Limitations</h2>
+<p>One of the most sensitive points in Stellar is <a href="https://www.stellar.org/developers/guides/concepts/transactions.html#sequence-number">transaction sequence</a>.
+In order for a transaction to be submitted successfully, this number should be correct. However, if you have several
+SDK instances, each working with the same wallet account or channel accounts, sequence collisions will occur.
+Though the SDK makes an effort to retrieve the correct sequence and retry the transaction, this is not a recommended practice.
+Instead, we highly recommend to keep only one SDK instance in your application, having unique channel accounts.
+Depending on the nature of your application, here are our recommendations:</p>
+<ol>
+<li><p>You have a simple (command line) script that sends transactions on demand or only once in a while.
+In this case, the SDK can be instantiated with only the wallet key, the channel accounts are not necessary.</p></li>
+<li><p>You have a single application server that should handle a stream of concurrent transactions. In this case,
+you need to make sure that only a single instance of SDK is initialized with multiple channel accounts.
+This is an important point, because if you use a standard <code>gunicorn/Flask</code> setup for example, gunicorn will spawn
+several <em>worker processes</em>, each containing your Flask application, each containing your SDK instance, so mutliple
+SDK instances will exist, having the same channel accounts. The solution is to use gunicorn <em>thread workers</em> instead of
+<em>process workers</em>, for example run gunicorn with <code>--threads</code> switch instead of <code>--workers</code> switch, so that only
+one Flask application is created, containing a single SDK instance.</p></li>
+<li><p>You have a number of load-balanced application servers. Here, each application server should a) have the setup outlined
+above, and b) have its own channel accounts. This way, you ensure you will not have any collisions in your transaction
+sequences.</p></li>
+</ol>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="ios.html">← kin-core-ios</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#requirements">Requirements</a></li><li><a href="#installation">Installation</a></li><li><a href="#usage">Usage</a><ul class="toc-headings"><li><a href="#initialization">Initialization</a></li><li><a href="#getting-wallet-details">Getting Wallet Details</a></li><li><a href="#getting-account-balance">Getting Account Balance</a></li><li><a href="#getting-account-data">Getting Account Data</a></li><li><a href="#checking-if-account-exists">Checking If Account Exists</a></li><li><a href="#creating-a-new-account">Creating a New Account</a></li><li><a href="#checking-if-account-is-activated-trustline-established">Checking if Account is Activated (Trustline established)</a></li><li><a href="#sending-currency">Sending Currency</a></li><li><a href="#getting-transaction-data">Getting Transaction Data</a></li><li><a href="#transaction-monitoring">Transaction Monitoring</a></li><li><a href="#checking-status">Checking Status</a></li></ul></li><li><a href="#limitations">Limitations</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/kin.svg" alt="Kin Developer Platform" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/getting-started.html">Getting Started</a><a href="/docs/android.html">Android</a><a href="/docs/ios.html">IOS</a><a href="/docs/python.html">Python</a></div><div><h5>Reddit</h5><a href="https://www.reddit.com/r/KinFoundation/" target="_blank" rel="noreferrer noopener">r/KinFoundation</a><h6>Telegram</h6><a href="https://t.me/KinAnnouncements" target="_blank" rel="noreferrer noopener">Announcements</a><a href="https://t.me/kinfoundation" target="_blank" rel="noreferrer noopener">General</a><a href="https://t.me/kincurrency" target="_blank" rel="noreferrer noopener">Currency</a><a href="https://t.me/kintechnology" target="_blank" rel="noreferrer noopener">Technology</a></div><div><h5>More</h5><a href="https://medium.com/kinfoundation" target="_blank" rel="noreferrer noopener">Kin Blog</a><a href="https://medium.com/inside-kin" target="_blank" rel="noreferrer noopener">Inside Kin Blog</a><a href="https://twitter.com/kin_foundation" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.youtube.com/channel/UCZ0z9fRKhW-GEjQs-_Jxfyg" target="_blank" rel="noreferrer noopener">YouTube</a><a href="https://kinecosystem.org" target="_blank" rel="noreferrer noopener">Kin Ecosystem</a></div></section><section class="copyright">Copyright © 2018 Kin Ecosystem</section></footer></div></body></html>
